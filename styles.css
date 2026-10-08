@@ -4,10 +4,12 @@
   --muted:#5c6678;
   --paper:#f7f9fc;
   --white:#ffffff;
-  --navy:#0b1733;
-  --blue:#2563eb;
-  --cyan:#16b8d4;
-  --violet:#6d5dfc;
+  --navy:#07102a;
+  --blue:#4f46e5;
+  --cyan:#00d9ff;
+  --pink:#f9d5e5;
+  --pink-soft:#fce7f3;
+  --violet:#7b61ff;
   --line:#e6eaf1;
   --shadow:0 18px 50px rgba(11,23,51,.10);
   --radius:22px;
@@ -24,20 +26,22 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .brand span{font-size:1.05rem}
 .navlinks{display:flex;gap:20px;align-items:center;font-size:.92rem;font-weight:650;color:#39445a}
 .navlinks a:hover{color:var(--blue)}
+.navlinks a:nth-child(4):hover,.navlinks a:nth-child(5):hover{color:#d9468b}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:12px;font-weight:750;border:1px solid transparent;transition:.2s}
 .btn-primary{color:#fff;background:linear-gradient(135deg,var(--blue),var(--violet));box-shadow:0 10px 25px rgba(37,99,235,.2)}
 .btn-primary:hover{transform:translateY(-1px);box-shadow:0 14px 30px rgba(37,99,235,.27)}
 .btn-secondary{background:#fff;border-color:var(--line)}
 .menu{display:none;border:0;background:none;font-size:1.5rem}
-.hero{background:
- radial-gradient(circle at 85% 20%,rgba(22,184,212,.18),transparent 27%),
- radial-gradient(circle at 70% 75%,rgba(109,93,252,.15),transparent 30%),
+ .hero{background:
+ radial-gradient(circle at 84% 18%,rgba(0,217,255,.16),transparent 27%),
+ radial-gradient(circle at 68% 78%,rgba(123,97,255,.15),transparent 30%),
+ radial-gradient(circle at 12% 78%,rgba(249,213,229,.32),transparent 25%),
  linear-gradient(180deg,#f8fbff 0%,#fff 100%);
  padding:92px 0 78px;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
-.eyebrow{display:inline-flex;padding:7px 12px;border:1px solid #dce7ff;border-radius:999px;background:#f1f6ff;color:#2453bd;font-size:.82rem;font-weight:800}
+.eyebrow{display:inline-flex;padding:7px 12px;border:1px solid #ead5e2;border-radius:999px;background:linear-gradient(90deg,#f1f6ff,#fff0f7);color:#4f46e5;font-size:.82rem;font-weight:800}
 h1{font-size:clamp(2.7rem,5vw,4.65rem);line-height:1.02;letter-spacing:-.055em;margin:18px 0}
-.gradient{background:linear-gradient(90deg,var(--blue),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.gradient{background:linear-gradient(90deg,var(--blue),var(--violet),#d9468b,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p{font-size:1.15rem;color:var(--muted);max-width:680px}
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;color:#566176;font-size:.88rem;font-weight:650}
@@ -61,27 +65,27 @@ h2{font-size:clamp(2rem,3.5vw,3.1rem);line-height:1.08;letter-spacing:-.04em;mar
 .grid{display:grid;gap:18px}
 .cards{grid-template-columns:repeat(3,1fr)}
 .card{padding:28px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 10px 35px rgba(11,23,51,.045)}
-.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);transition:.2s}
-.icon{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:#eef4ff;color:var(--blue);font-size:1.2rem;margin-bottom:18px}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 50px rgba(79,70,229,.12),0 8px 24px rgba(249,213,229,.28);transition:.2s;border-color:#ead5e2}
+.icon{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#eef4ff,var(--pink-soft));color:var(--blue);font-size:1.2rem;margin-bottom:18px}
 .card h3{margin:0 0 8px;font-size:1.1rem}
 .card p{margin:0;color:var(--muted);font-size:.94rem}
 .dark{background:var(--navy);color:#fff}
 .dark .lead{color:#b7c3d8}.dark .kicker{color:#66d9eb}
 .dark .card{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.10);box-shadow:none}
-.dark .icon{background:rgba(37,99,235,.18);color:#8ab1ff}
+.dark .icon{background:linear-gradient(135deg,rgba(79,70,229,.22),rgba(249,213,229,.12));color:#8ab1ff}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
 .checks{display:grid;gap:14px;margin-top:25px}
 .check{display:flex;gap:12px;align-items:flex-start}
 .check b{display:block}.check p{margin:2px 0 0;color:var(--muted);font-size:.93rem}
-.checkmark{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#e9f8f7;color:#07867e;font-weight:900;flex:none}
-.statbox{padding:32px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,#f7fbff,#fff)}
+.checkmark{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#e9f8f7,var(--pink-soft));color:#b83278;font-weight:900;flex:none}
+.statbox{padding:32px;border:1px solid #ead5e2;border-radius:28px;background:linear-gradient(145deg,#f7fbff,#fff7fb)}
 .statgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
 .stat{padding:20px;background:#fff;border:1px solid var(--line);border-radius:18px}
 .stat strong{font-size:1.6rem;display:block}.stat span{font-size:.85rem;color:var(--muted)}
 .industry{display:flex;flex-wrap:wrap;gap:10px}.pill{padding:10px 13px;border:1px solid var(--line);border-radius:999px;background:#fff;font-weight:650;color:#465166}
-.cta{padding:55px;border-radius:30px;background:linear-gradient(135deg,#0b1733,#173a73 55%,#2458b8);color:#fff;display:flex;justify-content:space-between;gap:30px;align-items:center;box-shadow:var(--shadow)}
+.cta{padding:55px;border-radius:30px;background:linear-gradient(135deg,#07102a,#173a73 52%,#4f46e5 82%,#b83278);color:#fff;display:flex;justify-content:space-between;gap:30px;align-items:center;box-shadow:var(--shadow)}
 .cta p{color:#c9d5e9;max-width:650px}
-footer{background:#081126;color:#b7c3d8;padding:58px 0 26px}
+footer{background:#07102a;color:#b7c3d8;padding:58px 0 26px}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
 footer h3,footer h4{color:#fff;margin-top:0}
 footer a:hover{color:#fff}
